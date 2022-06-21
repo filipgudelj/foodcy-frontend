@@ -1,0 +1,131 @@
+@import "../mixins";
+$darker-primary-color: darken($primary-color, 4%);
+
+.recipe-details-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    $darker-primary-color,
+    $primary-color,
+    lighten($primary-color, 1%),
+    lighten($primary-color, 2%),
+    lighten($primary-color, 4%),
+    lighten($primary-color, 8%)
+  );
+  .loading {
+    @include centerPosition;
+    color: $secondary-color;
+    font-size: 2rem;
+    font-family: $font-style;
+  }
+  .recipe-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    &-img-wrapper {
+      width: 40%;
+      height: 100%;
+      .recipe-details-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      height: 100%;
+      padding: 0;
+      color: $secondary-color;
+      font-family: $font-style;
+      &-item {
+        width: 80%;
+        margin: 1.3rem;
+        list-style: none;
+        font-size: 1.2rem;
+        @media (max-width: 1700px) {
+          font-size: 1.1rem;
+        }
+        @media (max-width: 1400px) {
+          margin: 1.1rem;
+          font-size: 1rem;
+        }
+        @media (max-width: 1200px) {
+          font-size: 0.9rem;
+        }
+        @media (max-width: 1000px) {
+          margin: 0.9rem;
+          font-size: 0.85rem;
+        }
+        @media (max-width: 800px) {
+          margin: 0.7rem;
+          font-size: 0.75rem;
+        }
+        @media (max-width: 600px) {
+          margin: 0.55rem;
+          font-size: 0.65rem;
+        }
+        @media (max-width: 450px) {
+          font-size: 0.55rem;
+        }
+        &-title {
+          font-size: 2.1rem;
+          font-weight: bold;
+          @media (max-width: 1600px) {
+            font-size: 1.9rem;
+          }
+          @media (max-width: 1400px) {
+            font-size: 1.7rem;
+          }
+          @media (max-width: 1200px) {
+            font-size: 1.55rem;
+          }
+          @media (max-width: 1000px) {
+            font-size: 1.45rem;
+          }
+          @media (max-width: 800px) {
+            font-size: 1.35rem;
+          }
+          @media (max-width: 600px) {
+            font-size: 1.25rem;
+          }
+          @media (max-width: 450px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    .return-link {
+      .return-button {
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        border: none;
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-size: 1.8rem;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $hover-color;
+          font-size: 2rem;
+        }
+        @media (max-width: 600px) {
+          width: 2.8rem;
+          height: 2.8rem;
+          font-size: 1.6rem;
+          &:hover {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../_mixins";
+
+.register-form-wrapper {
+  @include backgroundStyle;
+  @media (max-height: 800px) {
+    height: 115vh;
+  }
+  .register-form {
+    @include formStyle(33.5rem, 18rem);
+    @media (max-height: 800px) {
+      top: 57%;
+    }
+    @media (max-width: 750px) {
+      width: 15.5rem;
+      height: 31rem;
+    }
+    @media (max-width: 550px) {
+      width: 13.1rem;
+      height: 30.5rem;
+    }
+    .register-form-title {
+      @include formTitle(4.5%);
+      @media (max-width: 750px) {
+        font-size: 1.6rem;
+      }
+    }
+    label {
+      @include labelStyle;
+      @media (max-width: 750px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 550px) {
+        font-size: 0.8rem;
+      }
+    }
+    input {
+      @include inputStyle(15rem);
+      @media (max-width: 750px) {
+        width: 12rem;
+        height: 1.3rem;
+      }
+      @media (max-width: 550px) {
+        width: 10rem;
+        height: 1.2rem;
+      }
+    }
+    .register-item {
+      @include itemStyle;
+    }
+    .first-register-item {
+      @include firstItemStyle(2.3rem);
+    }
+    .register-button {
+      @include submitButtonStyle(1.7rem, 15.4rem);
+      @media (max-width: 750px) {
+        width: 12.4rem;
+        font-size: 1rem;
+        &:hover {
+          font-size: 1.05rem;
+        }
+      }
+      @media (max-width: 550px) {
+        width: 10.4rem;
+      }
+    }
+    .return-button {
+      @include returnButtonStyle(4.7%);
+      @media (max-width: 750px) {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.9rem;
+        &:hover {
+          font-size: 1rem;
+        }
+      }
+    }
+    .error-message {
+      @include errorMessageStyle(15rem);
+      @media (max-width: 750px) {
+        width: 12rem;
+      }
+      @media (max-width: 550px) {
+        width: 10rem;
+      }
+    }
+  }
+}

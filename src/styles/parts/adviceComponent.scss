@@ -1,0 +1,96 @@
+@import "../mixins";
+
+.single-advice-wrapper {
+  position: relative;
+  width: calc(25% - 2rem);
+  height: 17rem;
+  margin: 1rem 1rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    to bottom right,
+    lighten($primary-color, 2%),
+    lighten($primary-color, 5%),
+    lighten($primary-color, 10%)
+  );
+  color: $secondary-color;
+  text-align: center;
+  font-family: $font-style;
+  @media (max-width: 1450px) {
+    width: calc(33.33% - 2rem);
+  }
+  @media (max-width: 850px) {
+    width: calc(50% - 2rem);
+  }
+  @media (max-width: 450px) {
+    width: calc(50% - 1rem);
+    margin: 1rem 0.5rem;
+  }
+  &-title {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: bold;
+    @media (max-width: 1150px) {
+      font-size: 1.15rem;
+    }
+    @media (max-width: 950px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 850px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 750px) {
+      font-size: 1.15rem;
+    }
+    @media (max-width: 650px) {
+      font-size: 1.05rem;
+    }
+    @media (max-width: 570px) {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 430px) {
+      font-size: 0.85rem;
+    }
+  }
+  &-content {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    font-size: 0.95rem;
+    @media (max-width: 1150px) {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 1000px) {
+      font-size: 0.85rem;
+    }
+    @media (max-width: 950px) {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 850px) {
+      font-size: 0.95rem;
+    }
+    @media (max-width: 750px) {
+      font-size: 0.85rem;
+    }
+    @media (max-width: 650px) {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 570px) {
+      font-size: 0.7rem;
+    }
+    @media (max-width: 430px) {
+      font-size: 0.65rem;
+    }
+  }
+}

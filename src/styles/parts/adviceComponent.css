@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:ital,wght@300&display=swap");
+.single-advice-wrapper {
+  position: relative;
+  width: calc(25% - 2rem);
+  height: 17rem;
+  margin: 1rem 1rem;
+  border-radius: 1rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#242222), color-stop(#2c2929), to(#393636));
+  background-image: linear-gradient(to bottom right, #242222, #2c2929, #393636);
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 1450px) {
+  .single-advice-wrapper {
+    width: calc(33.33% - 2rem);
+  }
+}
+
+@media (max-width: 850px) {
+  .single-advice-wrapper {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 450px) {
+  .single-advice-wrapper {
+    width: calc(50% - 1rem);
+    margin: 1rem 0.5rem;
+  }
+}
+
+.single-advice-wrapper-title {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+@media (max-width: 1150px) {
+  .single-advice-wrapper-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .single-advice-wrapper-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .single-advice-wrapper-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .single-advice-wrapper-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .single-advice-wrapper-title {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .single-advice-wrapper-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .single-advice-wrapper-title {
+    font-size: 0.85rem;
+  }
+}
+
+.single-advice-wrapper-content {
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1150px) {
+  .single-advice-wrapper-content {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .single-advice-wrapper-content {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .single-advice-wrapper-content {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .single-advice-wrapper-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .single-advice-wrapper-content {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .single-advice-wrapper-content {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .single-advice-wrapper-content {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .single-advice-wrapper-content {
+    font-size: 0.65rem;
+  }
+}
+/*# sourceMappingURL=adviceComponent.css.map */

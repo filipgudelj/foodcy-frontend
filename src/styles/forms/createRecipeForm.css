@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:ital,wght@300&display=swap");
+.create-recipe-form-wrapper {
+  height: 100vh;
+  background-color: #1f1d1d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFFFFF'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (max-height: 800px) {
+  .create-recipe-form-wrapper {
+    height: 125vh;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 40rem;
+  border-radius: 1.5rem;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-height: 800px) {
+  .create-recipe-form-wrapper .create-recipe-form {
+    top: 62%;
+  }
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form {
+    width: 17rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .create-recipe-form-wrapper .create-recipe-form {
+    width: 14.5rem;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-form-title {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: #1f1d1d;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-form-title {
+    font-size: 1.8rem;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item label {
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item input {
+  width: 17rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.2px solid #1f1d1d;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item input:focus {
+  border: 2px solid #1f1d1d;
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-item input {
+    width: 13rem;
+    height: 1.3rem;
+  }
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-item label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-item input {
+    width: 11rem;
+    height: 1.2rem;
+  }
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-item label {
+    font-size: 0.8rem;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item-bigger input {
+  height: 6rem;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item-bigger textarea {
+  border: 0.2px solid #1f1d1d;
+  border-radius: 0.5rem;
+  resize: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  width: 17rem;
+  height: 4rem;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-recipe-item-bigger textarea:focus {
+  border: 2px solid #1f1d1d;
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-item-bigger textarea {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-recipe-item-bigger textarea {
+    width: 11rem;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form .file {
+  width: 6rem;
+  margin: 0.3rem;
+  margin-top: 0.65rem;
+  padding: 0.15rem;
+  border: 1px solid #1f1d1d;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .file input[type="file"] {
+  display: none;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .file:hover {
+  background-color: #1f1d1d;
+  color: white;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .first-create-recipe-item {
+  margin-top: 2.3rem;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 17.5rem;
+  height: 2.6rem;
+  margin-top: 1.7rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: #1f1d1d;
+  background-color: #1f1d1d;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 0.9rem;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .create-button:hover {
+  background-color: #3a3a3a;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-button {
+    width: 13.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .create-recipe-form-wrapper .create-recipe-form .create-button {
+    width: 11.5rem;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form .return-button {
+  position: absolute;
+  top: 4%;
+  left: 7%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #1f1d1d;
+  color: white;
+  font-size: 1.15rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.create-recipe-form-wrapper .create-recipe-form .return-button:hover {
+  font-size: 1.3rem;
+  background-color: #3a3a3a;
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form .return-button {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.05rem;
+  }
+  .create-recipe-form-wrapper .create-recipe-form .return-button:hover {
+    font-size: 1.15rem;
+  }
+}
+
+.create-recipe-form-wrapper .create-recipe-form .error-message {
+  width: 17rem;
+  height: 0.6rem;
+  margin-left: 0.2rem;
+  color: #da4747;
+  font-size: 0.65rem;
+  text-align: center;
+  text-align: left;
+}
+
+@media (max-width: 750px) {
+  .create-recipe-form-wrapper .create-recipe-form .error-message {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .create-recipe-form-wrapper .create-recipe-form .error-message {
+    width: 11rem;
+  }
+}
+/*# sourceMappingURL=createRecipeForm.css.map */

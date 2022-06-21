@@ -1,0 +1,93 @@
+@import "../mixins";
+
+.create-advice-form-wrapper {
+  @include backgroundStyle;
+  .create-advice-form {
+    @include formStyle(22rem, 20rem);
+    @media (max-width: 750px) {
+      width: 17rem;
+    }
+    @media (max-width: 550px) {
+      width: 14.5rem;
+    }
+    .create-advice-form-title {
+      @include formTitle(4.5%);
+      font-size: 2rem;
+      @media (max-width: 750px) {
+        font-size: 1.8rem;
+      }
+    }
+    .create-advice-item {
+      @include itemStyle;
+      @include inputAndLabelStyle(17rem);
+      @media (max-width: 750px) {
+        input {
+          width: 13rem;
+          height: 1.3rem;
+        }
+        label {
+          font-size: 0.9rem;
+        }
+      }
+      @media (max-width: 550px) {
+        input {
+          width: 11rem;
+          height: 1.2rem;
+        }
+        label {
+          font-size: 0.8rem;
+        }
+      }
+      &-bigger {
+        input {
+          height: 6rem;
+        }
+        textarea {
+          @include textareaStyle;
+          width: 17rem;
+          height: 4rem;
+          @media (max-width: 750px) {
+            width: 13rem;
+          }
+          @media (max-width: 550px) {
+            width: 11rem;
+          }
+        }
+      }
+    }
+
+    .first-create-advice-item {
+      @include firstItemStyle(2.3rem);
+    }
+    .create-button {
+      @include submitButtonStyle(1.7rem, 17.5rem);
+      margin-top: 0.9rem;
+      @media (max-width: 750px) {
+        width: 13.5rem;
+      }
+      @media (max-width: 550px) {
+        width: 11.5rem;
+      }
+    }
+    .return-button {
+      @include returnButtonStyle(4.7%);
+      @media (max-width: 750px) {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.05rem;
+        &:hover {
+          font-size: 1.15rem;
+        }
+      }
+    }
+    .error-message {
+      @include errorMessageStyle(17rem);
+      @media (max-width: 750px) {
+        width: 13rem;
+      }
+      @media (max-width: 550px) {
+        width: 11rem;
+      }
+    }
+  }
+}

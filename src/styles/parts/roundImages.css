@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:ital,wght@300&display=swap");
+.round-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.round-images .round-image-wrapper {
+  height: 18rem;
+  width: 18rem;
+  margin: 0 4rem;
+}
+
+@media (max-width: 1800px) {
+  .round-images .round-image-wrapper {
+    height: 16.5rem;
+    width: 16.5rem;
+  }
+}
+
+@media (max-width: 1700px) {
+  .round-images .round-image-wrapper {
+    height: 15.5rem;
+    width: 15.5rem;
+    margin: 0 3.5rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .round-images .round-image-wrapper {
+    height: 14.5rem;
+    width: 14.5rem;
+    margin: 0 3rem;
+  }
+}
+
+@media (max-width: 1350px) {
+  .round-images .round-image-wrapper {
+    height: 13.5rem;
+    width: 13.5rem;
+    margin: 0 2.5rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .round-images .round-image-wrapper {
+    height: 11.5rem;
+    width: 11.5rem;
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .round-images .round-image-wrapper {
+    height: 10.5rem;
+    width: 10.5rem;
+    margin: 0 1.7rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .round-images .round-image-wrapper {
+    height: 9.9rem;
+    width: 9.9rem;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .round-images .round-image-wrapper {
+    height: 9rem;
+    width: 9rem;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .round-images .round-image-wrapper {
+    height: 8rem;
+    width: 8rem;
+    margin: 0 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .round-images .round-image-wrapper {
+    height: 7rem;
+    width: 7rem;
+    margin: 0 1.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .round-images .round-image-wrapper {
+    height: 6rem;
+    width: 6rem;
+    margin: 0 1.3rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .round-images .round-image-wrapper {
+    height: 5.5rem;
+    width: 5.5rem;
+    margin: 0 1.1rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .round-images .round-image-wrapper {
+    height: 5.5rem;
+    width: 5.5rem;
+    margin: 0 0.8rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .round-images .round-image-wrapper {
+    height: 5rem;
+    width: 5rem;
+    margin: 0 0.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .round-images .round-image-wrapper {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .round-images .round-image-wrapper {
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: 0 0.4rem;
+  }
+}
+
+.round-images .round-image-wrapper .round-image {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.round-images .round-image-1 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.round-images .round-image-1:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.round-images .round-image-2:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.round-images .round-image-3:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.round-images .round-image-4 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.round-images .round-image-4:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=roundImages.css.map */

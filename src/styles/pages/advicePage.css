@@ -1,0 +1,48 @@
+.advice-wrapper {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-rows: 6rem minmax(45rem, 1fr) 13rem;
+      grid-template-rows: 6rem minmax(45rem, 1fr) 13rem;
+}
+
+@media (max-width: 535px) {
+  .advice-wrapper {
+    -ms-grid-rows: 5rem minmax(45rem, 1fr) 13rem;
+        grid-template-rows: 5rem minmax(45rem, 1fr) 13rem;
+  }
+}
+
+.advice-wrapper .navbar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.advice-wrapper .advice-list {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.advice-wrapper .footer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+/*# sourceMappingURL=advicePage.css.map */

@@ -1,0 +1,47 @@
+@import "../_mixins";
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+}
+
+.error-page {
+  @include backgroundStyle;
+  .content {
+    @include centerPosition;
+    width: 30rem;
+    height: 21.5rem;
+    border-radius: 1rem;
+    background-color: $secondary-color;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    h2 {
+      background: linear-gradient(90deg, #101010, #474747, #bcbbbb);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 6.7rem;
+    }
+    h4 {
+      font-size: 1.3rem;
+    }
+    p {
+      margin-top: 1.5rem;
+    }
+    .btn {
+      @include displayFlex;
+      width: 9rem;
+      height: 2.5rem;
+      margin: auto;
+      margin-top: 1.6rem;
+      border: none;
+      border-radius: 1.2rem;
+      background-color: $primary-color;
+      color: $secondary-color;
+      transition: all 0.5s;
+      &:hover {
+        background-color: $hover-color;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

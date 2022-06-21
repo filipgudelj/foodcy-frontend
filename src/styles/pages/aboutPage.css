@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:ital,wght@300&display=swap");
+.about-wrapper {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-rows: 6rem 90vh 13rem;
+      grid-template-rows: 6rem 90vh 13rem;
+}
+
+@media (max-width: 1050px) {
+  .about-wrapper {
+    -ms-grid-rows: 6rem 80vh 13rem;
+        grid-template-rows: 6rem 80vh 13rem;
+  }
+}
+
+@media (max-width: 535px) {
+  .about-wrapper {
+    -ms-grid-rows: 5rem 80vh 13rem;
+        grid-template-rows: 5rem 80vh 13rem;
+  }
+}
+
+.about-wrapper .navbar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.about-wrapper .about-image {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.about-wrapper .footer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+/*# sourceMappingURL=aboutPage.css.map */

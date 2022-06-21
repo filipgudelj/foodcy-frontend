@@ -1,0 +1,118 @@
+@import "../_mixins";
+
+.create-recipe-form-wrapper {
+  @include backgroundStyle;
+  @media (max-height: 800px) {
+    height: 125vh;
+  }
+  .create-recipe-form {
+    @include formStyle(40rem, 20rem);
+    @media (max-height: 800px) {
+      top: 62%;
+    }
+    @media (max-width: 750px) {
+      width: 17rem;
+    }
+    @media (max-width: 550px) {
+      width: 14.5rem;
+    }
+    .create-recipe-form-title {
+      @include formTitle(4%);
+      font-size: 2rem;
+      @media (max-width: 750px) {
+        font-size: 1.8rem;
+      }
+    }
+    .create-recipe-item {
+      @include itemStyle;
+      @include inputAndLabelStyle(17rem);
+      @media (max-width: 750px) {
+        input {
+          width: 13rem;
+          height: 1.3rem;
+        }
+        label {
+          font-size: 0.9rem;
+        }
+      }
+      @media (max-width: 550px) {
+        input {
+          width: 11rem;
+          height: 1.2rem;
+        }
+        label {
+          font-size: 0.8rem;
+        }
+      }
+      &-bigger {
+        input {
+          height: 6rem;
+        }
+        textarea {
+          @include textareaStyle;
+          width: 17rem;
+          height: 4rem;
+          @media (max-width: 750px) {
+            width: 13rem;
+          }
+          @media (max-width: 550px) {
+            width: 11rem;
+          }
+        }
+      }
+    }
+
+    .file {
+      width: 6rem;
+      margin: 0.3rem;
+      margin-top: 0.65rem;
+      padding: 0.15rem;
+      border: 1px solid $primary-color;
+      border-radius: 0.4rem;
+      font-size: 0.9rem;
+      text-align: center;
+      input[type="file"] {
+        display: none;
+      }
+      transition: all 0.5s;
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+
+    .first-create-recipe-item {
+      @include firstItemStyle(2.3rem);
+    }
+    .create-button {
+      @include submitButtonStyle(1.7rem, 17.5rem);
+      margin-top: 0.9rem;
+      @media (max-width: 750px) {
+        width: 13.5rem;
+      }
+      @media (max-width: 550px) {
+        width: 11.5rem;
+      }
+    }
+    .return-button {
+      @include returnButtonStyle(4%);
+      @media (max-width: 750px) {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.05rem;
+        &:hover {
+          font-size: 1.15rem;
+        }
+      }
+    }
+    .error-message {
+      @include errorMessageStyle(17rem);
+      @media (max-width: 750px) {
+        width: 13rem;
+      }
+      @media (max-width: 550px) {
+        width: 11rem;
+      }
+    }
+  }
+}

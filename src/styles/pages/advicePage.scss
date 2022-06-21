@@ -1,0 +1,22 @@
+.advice-wrapper {
+  display: grid;
+  position: relative;
+  grid-template-rows: min(6rem) minmax(45rem, 1fr) min(13rem);
+  @media (max-width: 535px) {
+    grid-template-rows: min(5rem) minmax(45rem, 1fr) min(13rem);
+  }
+  .navbar {
+    grid-row: 1/2;
+  }
+  .advice-list {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: fit-content;
+  }
+  .footer {
+    grid-row: 3/4;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../_mixins";
+
+.about-wrapper {
+  display: grid;
+  position: relative;
+  grid-template-rows: min(6rem) 90vh min(13rem);
+  @media (max-width: 1050px) {
+    grid-template-rows: min(6rem) 80vh min(13rem);
+  }
+  @media (max-width: 535px) {
+    grid-template-rows: min(5rem) 80vh min(13rem);
+  }
+  .navbar {
+    grid-row: 1/2;
+  }
+  .about-image {
+    grid-row: 2/3;
+  }
+  .footer {
+    grid-row: 3/4;
+  }
+}

@@ -1,0 +1,79 @@
+@import "../_mixins";
+
+.login-form-wrapper {
+  @include backgroundStyle;
+  .login-form {
+    @include formStyle(18.5rem, 18rem);
+    @media (max-width: 750px) {
+      width: 15.5rem;
+    }
+    @media (max-width: 550px) {
+      width: 13.1rem;
+    }
+    .login-form-title {
+      @include formTitle(5.5%);
+      @media (max-width: 750px) {
+        font-size: 1.6rem;
+      }
+    }
+    label {
+      @include labelStyle;
+      @media (max-width: 750px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 550px) {
+        font-size: 0.8rem;
+      }
+    }
+    input {
+      @include inputStyle(15rem);
+      @media (max-width: 750px) {
+        width: 12rem;
+        height: 1.3rem;
+      }
+      @media (max-width: 550px) {
+        width: 10rem;
+        height: 1.2rem;
+      }
+    }
+    .login-item {
+      @include itemStyle;
+    }
+    .first-login-item {
+      @include firstItemStyle(2rem);
+    }
+    .login-button {
+      @include submitButtonStyle(1.4rem, 15.4rem);
+      @media (max-width: 750px) {
+        width: 12.4rem;
+        font-size: 1rem;
+        &:hover {
+          font-size: 1.05rem;
+        }
+      }
+      @media (max-width: 550px) {
+        width: 10.4rem;
+      }
+    }
+    .return-button {
+      @include returnButtonStyle(6.4%);
+      @media (max-width: 750px) {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.05rem;
+        &:hover {
+          font-size: 1.15rem;
+        }
+      }
+    }
+    .error-message {
+      @include errorMessageStyle(15rem);
+      @media (max-width: 750px) {
+        width: 12rem;
+      }
+      @media (max-width: 550px) {
+        width: 10rem;
+      }
+    }
+  }
+}
