@@ -30,7 +30,7 @@ class CreateAdviceForm extends Form {
 
   doSubmit = async () => {
     const response = await axios.post(
-      "http://localhost:8000/api/advice",
+      `${process.env.REACT_APP_API_URI}api/advice`,
       {
         title: this.state.data.title,
         content: this.state.data.content,

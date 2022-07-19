@@ -13,7 +13,7 @@ const RecipesPage = () => {
 
   const fetchRecipes = async () => {
     const response = await axios
-      .get("http://localhost:8000/api/recipes")
+      .get(`${process.env.REACT_APP_API_URI}api/recipes`)
       .catch((err) => {
         console.log("Err", err);
       });

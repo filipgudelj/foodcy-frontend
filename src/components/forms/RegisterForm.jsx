@@ -29,13 +29,16 @@ class RegisterForm extends Form {
   };
 
   doSubmit = async () => {
-    const response = await axios.post("http://localhost:8000/api/users", {
-      username: this.state.data.username,
-      firstname: this.state.data.firstname,
-      lastname: this.state.data.lastname,
-      email: this.state.data.email,
-      password: this.state.data.password,
-    });
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URI}api/users`,
+      {
+        username: this.state.data.username,
+        firstname: this.state.data.firstname,
+        lastname: this.state.data.lastname,
+        email: this.state.data.email,
+        password: this.state.data.password,
+      }
+    );
     console.log(response);
     console.log("Registered");
     window.location.reload();

@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "../common/Form";
 import Joi from "joi-browser";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/forms/loginForm.css";
 
@@ -12,6 +12,7 @@ class LoginForm extends Form {
       password: "",
     },
     errors: {},
+    replace: false,
   };
 
   schema = {
@@ -21,17 +22,18 @@ class LoginForm extends Form {
 
   doSubmit = async () => {
     const response = await axios
-      .post("http://localhost:8000/api/login_check", {
+      .post(`${process.env.REACT_APP_API_URI}api/login_check`, {
         username: this.state.data.username,
         password: this.state.data.password,
       })
       .then((response) => {
+        {
+          this.setState({ replace: true });
+        }
         if (response.data.token) {
           localStorage.setItem("user", JSON.stringify(response.data));
         }
       });
-    console.log(response);
-    console.log(localStorage.getItem("user"));
     window.location.reload();
   };
 

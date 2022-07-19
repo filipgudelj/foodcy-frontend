@@ -13,7 +13,7 @@ class CreateRecipeForm extends Form {
       steps: "",
       company: "",
       timeToEat: "",
-      image: "",
+      image: null,
     },
     errors: {},
   };
@@ -38,7 +38,7 @@ class CreateRecipeForm extends Form {
 
   doSubmit = async () => {
     const response = await axios.post(
-      "http://localhost:8000/api/recipes",
+      `${process.env.REACT_APP_API_URI}api/recipes`,
       {
         title: this.state.data.title,
         ingredients: this.state.data.ingredients,

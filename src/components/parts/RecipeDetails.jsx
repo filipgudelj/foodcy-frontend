@@ -10,17 +10,18 @@ import {
 import Placeholder from "../../images/Placeholder.jpg";
 import { Link } from "react-router-dom";
 import RecipeImage from "./RecipeImage";
+import Author from "./Author";
 import "../../styles/parts/recipeDetails.css";
 
 const RecipeDetails = () => {
   const recipe = useSelector((state) => state.recipe);
-  const { title, ingredients, steps, timeToEat, image } = recipe;
+  const { title, ingredients, steps, timeToEat, image, author } = recipe;
   const { recipeId } = useParams();
   const dispatch = useDispatch();
 
   const fetchRecipeDetails = async () => {
     const response = await axios
-      .get(`http://localhost:8000/api/recipes/${recipeId}`)
+      .get(`${process.env.REACT_APP_API_URI}api/recipes/${recipeId}`)
       .catch((err) => {
         console.log("Err", err);
       });
@@ -67,6 +68,9 @@ const RecipeDetails = () => {
               <br /> {steps}
             </li>
           </ul>
+          {localStorage.getItem("user") ? (
+            <Author author={author} className="author" />
+          ) : null}
           <Link to="/recipes" className="return-link">
             <button className="return-button">&#8592;</button>
           </Link>

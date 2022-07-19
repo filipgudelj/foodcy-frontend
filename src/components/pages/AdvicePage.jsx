@@ -13,7 +13,7 @@ const AdvicePage = () => {
 
   const fetchAdvice = async () => {
     const response = await axios
-      .get("http://localhost:8000/api/advice")
+      .get(`${process.env.REACT_APP_API_URI}api/advice`)
       .catch((err) => {
         console.log("Err", err);
       });

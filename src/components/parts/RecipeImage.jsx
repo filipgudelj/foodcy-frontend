@@ -8,7 +8,7 @@ const RecipeImage = (props) => {
   const getImage = async (image) => {
     const first_response = await axios.get(`http://localhost:8000${image}`);
     const image_url = first_response.data.url;
-    const image_path = `http://localhost:8000/images/${image_url}`;
+    const image_path = `${process.env.REACT_APP_API_URI}images/${image_url}`;
     setSrc(image_path);
   };
 
