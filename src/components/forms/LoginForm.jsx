@@ -13,6 +13,7 @@ class LoginForm extends Form {
     },
     errors: {},
     replace: false,
+    redirect: false,
   };
 
   schema = {
@@ -34,12 +35,15 @@ class LoginForm extends Form {
           localStorage.setItem("user", JSON.stringify(response.data));
         }
       });
-    window.location.reload();
+    this.setState({ redirect: true });
   };
 
   render() {
     return (
       <div className="login-form-wrapper">
+        {this.state.redirect === true && (
+          <Navigate to="/homepage" replace={true} />
+        )}
         <form onSubmit={this.handleSubmit} className="login-form">
           <h1 className="login-form-title">Login</h1>
           {this.renderInput(

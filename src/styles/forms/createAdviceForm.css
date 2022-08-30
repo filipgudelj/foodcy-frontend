@@ -229,6 +229,12 @@
 
 @media (max-width: 750px) {
   .create-advice-form-wrapper .create-advice-form .error-message {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .create-advice-form-wrapper .create-advice-form .error-message {
     width: 13rem;
   }
 }

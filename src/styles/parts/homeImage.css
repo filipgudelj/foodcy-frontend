@@ -118,7 +118,7 @@
   position: absolute;
   top: 35%;
   left: 10%;
-  width: 32rem;
+  width: 30.9rem;
   padding: 2rem;
   border-radius: 3rem;
   background-color: #1f1d1d;
@@ -128,6 +128,8 @@
   font-size: 2.4rem;
   font-style: italic;
   font-weight: bold;
+  text-align: justify;
+  word-break: keep-all;
   opacity: 0.8;
 }
 

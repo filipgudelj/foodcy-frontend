@@ -207,6 +207,12 @@
 
 @media (max-width: 750px) {
   .login-form-wrapper .login-form .error-message {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .login-form-wrapper .login-form .error-message {
     width: 12rem;
   }
 }

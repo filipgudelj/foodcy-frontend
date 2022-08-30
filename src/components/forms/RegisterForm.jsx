@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "../common/Form";
 import Joi from "joi-browser";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/forms/registerForm.css";
 
@@ -15,6 +15,7 @@ class RegisterForm extends Form {
       password: "",
     },
     errors: {},
+    redirect: false,
   };
 
   schema = {
@@ -39,14 +40,15 @@ class RegisterForm extends Form {
         password: this.state.data.password,
       }
     );
-    console.log(response);
-    console.log("Registered");
-    window.location.reload();
+    this.setState({ redirect: true });
   };
 
   render() {
     return (
       <div className="register-form-wrapper">
+        {this.state.redirect === true && (
+          <Navigate to="/homepage" replace={true} />
+        )}
         <form onSubmit={this.handleSubmit} className="register-form">
           <Link to="/" className="return-link">
             <button className="return-button">&#8592;</button>

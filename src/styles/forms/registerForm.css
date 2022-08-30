@@ -221,6 +221,12 @@
 
 @media (max-width: 750px) {
   .register-form-wrapper .register-form .error-message {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .register-form-wrapper .register-form .error-message {
     width: 12rem;
   }
 }

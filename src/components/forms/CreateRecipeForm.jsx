@@ -1,8 +1,9 @@
 import React from "react";
 import Form from "../common/Form";
 import Joi from "joi-browser";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import UploadImage from "../common/UploadImage";
 import "../../styles/forms/createRecipeForm.css";
 
 class CreateRecipeForm extends Form {
@@ -13,9 +14,10 @@ class CreateRecipeForm extends Form {
       steps: "",
       company: "",
       timeToEat: "",
-      image: null,
     },
+    image: [],
     errors: {},
+    redirect: false,
   };
 
   schema = {
@@ -24,7 +26,7 @@ class CreateRecipeForm extends Form {
     steps: Joi.string().required().min(5).max(500).label("Steps"),
     company: Joi.label("Company"),
     timeToEat: Joi.string().required().min(5).max(30).label("TimeToEat"),
-    image: Joi.label("Image"),
+    image: Joi.any(),
   };
 
   config() {
@@ -36,6 +38,11 @@ class CreateRecipeForm extends Form {
     };
   }
 
+  handleCallback = (childData) => {
+    this.setState({ image: childData });
+    console.log(this.state.image);
+  };
+
   doSubmit = async () => {
     const response = await axios.post(
       `${process.env.REACT_APP_API_URI}api/recipes`,
@@ -45,15 +52,19 @@ class CreateRecipeForm extends Form {
         steps: this.state.data.steps,
         company: this.state.data.company,
         timeToEat: this.state.data.timeToEat,
+        image: this.state.image,
       },
       this.config()
     );
-    window.location.reload();
+    this.setState({ redirect: true });
   };
 
   render() {
     return (
       <div className="create-recipe-form-wrapper">
+        {this.state.redirect === true && (
+          <Navigate to="/recipes" replace={true} />
+        )}
         <form onSubmit={this.handleSubmit} className="create-recipe-form">
           <h1 className="create-recipe-form-title">Recipe</h1>
           {this.renderInput(
@@ -78,12 +89,7 @@ class CreateRecipeForm extends Form {
             "text",
             "create-recipe-item"
           )}
-          {this.renderInputFile(
-            "image",
-            "Image",
-            "file",
-            "create-recipe-item create-recipe-item-img"
-          )}
+          <UploadImage parentCallback={this.handleCallback} />
           {this.renderInput(
             "company",
             "Company (optional)",

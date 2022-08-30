@@ -2,7 +2,7 @@
 $primary-color: #1f1d1d;
 $secondary-color: white;
 $hover-color: #3a3a3a;
-$warning-color-1: rgb(218, 71, 71);
+$warning-color: rgb(218, 71, 71);
 $font-style: "Roboto", sans-serif;
 
 @mixin displayFlex {
@@ -121,10 +121,13 @@ $font-style: "Roboto", sans-serif;
   width: $width;
   height: 0.6rem;
   margin-left: 0.2rem;
-  color: $warning-color-1;
+  color: $warning-color;
   font-size: 0.65rem;
   text-align: center;
   text-align: left;
+  @media (max-width: 750px) {
+    font-size: 0.55rem;
+  }
 }
 
 @mixin homeButtonStyle($width, $hover, $hover-text) {

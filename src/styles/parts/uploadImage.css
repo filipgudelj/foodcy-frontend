@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:ital,wght@300&display=swap");
+.img-upload-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img-upload-container .img-input-label {
+  width: 6rem;
+  margin: 0.3rem;
+  margin-top: 0.9rem;
+  padding: 0.15rem;
+  border: 1px solid #1f1d1d;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.img-upload-container .img-input-label input[type="file"] {
+  display: none;
+}
+
+.img-upload-container .img-input-label:hover {
+  background-color: #1f1d1d;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .img-upload-container .img-input-label {
+    padding: 0.1rem;
+    font-size: 0.8rem;
+  }
+}
+
+.img-upload-container .img-btn {
+  width: 6rem;
+  margin: 0.3rem;
+  margin-top: 0.2rem;
+  padding: 0.15rem;
+  border: 1px solid #1f1d1d;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.img-upload-container .img-btn:hover {
+  background-color: #1f1d1d;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .img-upload-container .img-btn {
+    padding: 0.1rem;
+    font-size: 0.8rem;
+  }
+}
+
+.img-upload-container .upload-text-false {
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  color: #da4747;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 750px) {
+  .img-upload-container .upload-text-false {
+    font-size: 0.55rem;
+  }
+}
+
+.img-upload-container .upload-text-true {
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  color: #1f1d1d;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 750px) {
+  .img-upload-container .upload-text-true {
+    font-size: 0.55rem;
+  }
+}
+/*# sourceMappingURL=uploadImage.css.map */

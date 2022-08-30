@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "../common/Form";
 import Joi from "joi-browser";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/forms/createAdviceForm.css";
 
@@ -12,6 +12,7 @@ class CreateAdviceForm extends Form {
       content: "",
     },
     errors: {},
+    redirect: false,
   };
 
   schema = {
@@ -37,13 +38,15 @@ class CreateAdviceForm extends Form {
       },
       this.config()
     );
-    console.log(response);
-    window.location.reload();
+    this.setState({ redirect: true });
   };
 
   render() {
     return (
       <div className="create-advice-form-wrapper">
+        {this.state.redirect === true && (
+          <Navigate to="/advice" replace={true} />
+        )}
         <form onSubmit={this.handleSubmit} className="create-advice-form">
           <h1 className="create-advice-form-title">Advice</h1>
           {this.renderInput(

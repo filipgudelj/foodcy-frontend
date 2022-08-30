@@ -1,0 +1,69 @@
+@import "../_mixins";
+
+.img-upload-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  .img-input-label {
+    width: 6rem;
+    margin: 0.3rem;
+    margin-top: 0.9rem;
+    padding: 0.15rem;
+    border: 1px solid $primary-color;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    text-align: center;
+    input[type="file"] {
+      display: none;
+    }
+    transition: all 0.5s;
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+    @media (max-width: 750px) {
+      padding: 0.1rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  .img-btn {
+    width: 6rem;
+    margin: 0.3rem;
+    margin-top: 0.2rem;
+    padding: 0.15rem;
+    border: 1px solid $primary-color;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.5s;
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+    @media (max-width: 750px) {
+      padding: 0.1rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  .upload-text-false {
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+    color: $warning-color;
+    font-size: 0.7rem;
+    @media (max-width: 750px) {
+      font-size: 0.55rem;
+    }
+  }
+  .upload-text-true {
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+    color: $primary-color;
+    font-size: 0.7rem;
+    @media (max-width: 750px) {
+      font-size: 0.55rem;
+    }
+  }
+}
